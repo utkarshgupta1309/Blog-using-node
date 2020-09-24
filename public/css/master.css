@@ -1,0 +1,29 @@
+:root {
+    --primary-txt-color:#F7B32B;
+    --secondary-txt-color:#ED6A5A;
+  }
+
+.main-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-gap: 50px;
+} 
+  
+h2{
+    color:var(--secondary-txt-color)
+}
+.single{
+display:flex;
+flex-direction: column;
+align-content: center;
+border: 2px solid #F7B32B;
+text-decoration: none;
+}
+.single h1{
+    color: var(--primary-txt-color);
+    text-decoration: none;
+}
+.single p{
+    color:var(--secondary-txt-color);
+    text-decoration: none;
+}

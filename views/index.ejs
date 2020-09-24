@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <title>BaE.com | <%= title %>
+    </title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs')%>
+    <h2>Latest Blogs</h2>
+    <div class="main-container">
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <a class = 'single' href = "/blogs/<%= blog._id %>">
+                    <img style="width:200px; " src="data:blog/<%=blog.img.contentType%>;base64, 
+                     <%=blog.img.data.toString('base64')%>">
+                    <h1 class="title"><%= blog.title%></h3>
+                    <p class = 'snippet'><%= blog.snippet%></p>                   
+                </a>
+                <% }) %>
+                <% } %> 
+    </div>
+</body>
+</html>
